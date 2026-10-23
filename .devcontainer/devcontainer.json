@@ -1,0 +1,11 @@
+{
+  "name": "Quan ly sinh vien",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": { "label": "Quan ly sinh vien", "onAutoForward": "openBrowser" }
+  },
+  "postCreateCommand": "npm install"
+}
