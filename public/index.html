@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý sinh viên</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Quản lý sinh viên</h1>
+
+    <section class="card">
+      <h2>Thêm sinh viên</h2>
+      <form id="form-sv">
+        <div class="grid">
+          <label>Mã SV *
+            <input type="text" id="maSV" required maxlength="20" placeholder="VD: SV001">
+          </label>
+          <label>Họ tên *
+            <input type="text" id="hoTen" required maxlength="100" placeholder="VD: Nguyễn Văn A">
+          </label>
+          <label>Lớp
+            <input type="text" id="lop" maxlength="50" placeholder="VD: CNTT62">
+          </label>
+          <label>Email
+            <input type="email" id="email" maxlength="100" placeholder="VD: a@gmail.com">
+          </label>
+        </div>
+        <button type="submit">Thêm</button>
+        <p id="thong-bao" class="thong-bao"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Danh sách sinh viên</h2>
+      <table>
+        <thead>
+          <tr><th>Mã SV</th><th>Họ tên</th><th>Lớp</th><th>Email</th><th></th></tr>
+        </thead>
+        <tbody id="ds-sv"></tbody>
+      </table>
+      <p id="trong" class="trong" hidden>Chưa có sinh viên nào.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
